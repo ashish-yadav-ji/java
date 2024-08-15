@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai with Ashish</title>
+</head>
+<body>
+    <h1 id="chai">chai with ashish</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        
+        const names = ['sammu', 'rajit', 'raju', 'ashish'];
+        let index = 0;
+        let intervalId;
+
+        const updateText = () => {
+            document.getElementById('chai').textContent = `chai with ${names[index]}`;
+            index = (index + 1) % names.length;
+        };
+
+        document.getElementById('start').addEventListener('click', () => {
+            if (!intervalId) {
+                updateText(); // Initialize immediately
+                intervalId = setInterval(updateText, 2000);
+            }
+        });
+
+        document.getElementById('stop').addEventListener('click', () => {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+        });
+    </script>
+</body>
+</html>

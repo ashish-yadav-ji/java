@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Practice</title>
+</head>
+<body>
+    <button id="my-button">Click Me!</button>
+
+    <script>
+        // Question 10: How can you add a 'click' event listener to the 'my-button' that alerts "Button Clicked!" when the button is clicked?
+        document.getElementById('my-button').addEventListener('click', function (e) {
+            alert("button was clicked")
+        })
+        // Question 11: What is event propagation and how can you prevent it in the event listener?
+        document.getElementById('my-button').addEventListener('ckick', function (e) {
+            e.stopPropagation()
+        })   // &
+        document.getElementById('my-button').addEventListener('ckick', function (e) {
+            e.preventDefault()  
+        })
+    </script>
+</body>
+</html>

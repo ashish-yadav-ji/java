@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Practice</title>
+</head>
+<body>
+    <img id="image" src="old-image.jpg" alt="Old Image">
+
+    <script>
+        // Question 6: How can you change the 'src' attribute of the 'image' element to 'new-image.jpg'?
+        let image = document.getElementById('image');
+        image.setAttribute('src', 'new-image.jpg');
+        // Question 7: How can you add a 'title' attribute with the value 'New Image Title' to the 'image' element?
+        image.setAttribute('title', 'new image title')
+    </script>
+</body>
+</html>

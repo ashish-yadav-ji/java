@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai with ashish</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    //DOM MANUOULATION // 
+
+    // ADD NEW LANGUAGE MATHOD 1
+
+    function addLan(lanName) {
+        let li = document.createElement('li')
+        li.innerText = `${lanName}`
+        document.querySelector('.language').
+        appendChild(li)
+    }
+
+    addLan("java")
+    addLan("python")
+
+// ADD NEW LAN. MATHOD 2 (GOOD FOR LARGE DATA)
+    function addopt(lanName) {
+        let li = document.createElement('li');
+        li.appendChild(document.createTextNode(lanName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addopt("golang")
+    addopt("kotlin")
+
+    // EDIT (REPLACE SECOND LAN)
+
+    let secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang)
+    // secondLang.innerHTML = "mojo"  (GOOD MATHOD BUT NOT FOR VERY LARGE DATA CAUSE PROBLEM IN OPTIMIZATION)
+    let newLi = document.createElement('li')
+    newLi.textContent = "mojo"
+    secondLang.replaceWith(newLi)
+
+    //EDIT (REPLACE FIRST LAN) 
+    let firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>typeSript</li>"
+
+    //REMOVE (LAST LAN.)
+    let lastChild = document.querySelector("li:last-child")
+    lastChild.remove()
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Practice</title>
+</head>
+<body>
+    <div id="main-content">
+        <p id="first-paragraph">Old Content</p>
+    </div>
+
+    <script>
+        // Question 4: How can you change the text inside 'first-paragraph' to 'New Content' using innerHTML?
+        document.getElementById('first-paragraph').innerHTML = "new content"
+        // Question 5: How would you use textContent to achieve the same change?
+        document.getElementById('first-paragraph').textContent = "new content by using text content"
+    </script>
+</body>
+</html>

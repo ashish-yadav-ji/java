@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Practice</title>
+</head>
+<body>
+    <div class="highlight">First Div</div>
+    <div class="highlight">Second Div</div>
+    <div class="highlight">Third Div</div>
+
+    <script>
+        // Question 16: How can you change the background color of all elements with the class 'highlight' to yellow?
+        // (Use a loop or forEach)
+        let ashu = document.querySelectorAll('.highlight')
+        ashu.forEach((e) => {
+            e.style.backgroundColor = 'yellow'
+        })
+    </script>
+</body>
+</html>
